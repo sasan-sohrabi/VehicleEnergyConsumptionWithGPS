@@ -24,9 +24,20 @@ lat = gps_data['latitude'].tolist()
 lon = gps_data['longitude'].tolist()
 real_elevation = gps_data['altitude(m)'].tolist()
 
+
+df = pd.DataFrame(columns=['real_elevation', 'elevation', 'diff'], index=range(3))
 for i in range(len(lat)):
     elevation = get_elevation(lat[i], lon[i])
-    print('real_elevation:', real_elevation[i], '\n elevation:', elevation, '\n diff:', real_elevation[i] - elevation)
+    diff = real_elevation[i] - elevation
+    print('real_elevation:', real_elevation[i], '\n elevation:', elevation, '\n diff:', diff)
+    df.at[i, 'real_elevation'] = real_elevation[i]
+    df.at[i, 'elevation'] = elevation
+    df.at[i, 'diff'] = diff
+
+df = pd.read_csv('output_file.csv')
+
+
+
 
 
 
