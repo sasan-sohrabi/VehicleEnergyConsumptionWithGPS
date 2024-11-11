@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/myenv" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/myenv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.12 (highconcentratedphotovoltaicthermal)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.13 (highconcentratedphotovoltaicthermal)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
